@@ -4,6 +4,10 @@
 
 namespace kate{
     class KATEGameObject{
+        struct RigidBody2dComponent {
+            glm::vec2 velocity;
+            float mass{1.0f};
+        };
         struct Transform2dComponent{
             glm::vec2 translation{}; //position offset, this will be used to move things up and down
             glm::vec2 scale{1.f,1.f};
@@ -36,10 +40,11 @@ namespace kate{
             KATEGameObject &operator=(const KATEGameObject&&) = delete;
             KATEGameObject(KATEGameObject&&) = default;
             KATEGameObject &operator=(KATEGameObject&&) = default;
-
+            RigidBody2dComponent rigidBody2d;
         private:
             KATEGameObject(id_t objId):id(objId){
             }
             id_t id;
+            
     };
 }

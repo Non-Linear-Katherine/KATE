@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25.1)
 
-set(NAME First_App)
+set(NAME Gravity_System_Test)
 
 message(STATUS "using ${CMAKE_GENERATOR}")
 if (CMAKE_GENERATOR STREQUAL "MinGW Makefiles")
